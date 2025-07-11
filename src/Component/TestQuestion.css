@@ -1,0 +1,68 @@
+.test_box{
+    margin: 2.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    
+}
+.test_question,.test_option{
+  flex: 1;
+  border: 1.5px solid rgb(172, 171, 171);
+  border-radius: 7px;
+}
+.test_question{
+    height: max-content;
+}
+.qt_top,.op_top{
+  background-color: rgba(195, 197, 191, 0.521);
+  border: 1px solid rgb(172, 171, 171);
+  font-size: 1.1rem;
+  padding: 6px;
+}
+.qt_top{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.qt_text{
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+.op_text{
+    font-size: 0.9rem;
+    padding-bottom: 15px;
+}
+.op_text >div{
+    padding: 0.5rem 1rem;
+    margin-top: 0.8rem;
+    cursor: text;
+    border: 1px solid transparent;
+    
+}
+.op_text >div:hover{
+    border: 1px solid rgb(172, 171, 171);
+    border-radius: 8px;
+}
+.op_text >div> input[type="radio"]{
+    width: 0.9rem;
+    height: 0.9rem;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.watermarked::before {
+    pointer-events: none;
+    position: fixed;
+    top: -75%;
+    left: -75%;
+
+    display: block;
+    width: 200%;
+    height: 200%;
+
+    transform: rotate(-45deg);
+    content: attr(data-watermark);
+
+    font-size: 2.8rem;
+    opacity: 0.19;
+    line-height: 2em;
+    color: #cccccc;
+}
